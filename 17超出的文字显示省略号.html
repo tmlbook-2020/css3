@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超出文字显示省略号text-overflow</title>
+    <style>
+        div {
+            width: 120px;
+            height: 20px;
+            border: 1px solid #f00;
+            white-space: nowrap; /* 首先先需要这句话，强制一行 */
+            overflow: hidden; /* 其次必须有这句话 */
+            /* text-overflow: clip;直接裁剪 */
+            text-overflow: ellipsis; /* 超出的部分用省略号 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我的名字是安迪，楚乔的男朋友
+    </div>
+</body>
+</html>

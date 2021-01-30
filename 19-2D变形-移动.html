@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D变形-移动</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* transform: translate(x,y); 变形 ：移动；*/
+            /* transform: translate(50px, 50px); */
+            transition: all 0.5s;
+        }
+        /* a:active 鼠标点击没有松开的时候触发的状态，相当于点击 */
+        div:active {
+            /* transform: translate(50px, 50px);当我们点击之后，再移动位置 */
+            /* transform: translate(50px);当我们点击之后，再移动x轴位置 */
+            /* transform: translate(0, 50px);当我们点击之后，再移动y轴位置 */
+            /* transform: translateX(30px);只跟一个参数 就是x */
+            transform: translateY(50px);/* 只跟一个参数 就是y */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

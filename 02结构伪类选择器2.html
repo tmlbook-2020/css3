@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器2</title>
+    <style>
+        /* 3n代表3的倍数 n是从0开始的 */
+        /* 选择所有的奇数 odd代表奇数 2n-1也代表奇数*/
+        li:nth-child(odd) {
+            color: pink;
+        }
+        /* 选择所有的偶数 even代表偶数 2n也代表偶数*/
+        li:nth-child(even) {
+            color: brown;
+        }
+        /* :nth-child()是从第一个元素开始数 */
+        /* :nth-last-child()是从最后一个孩子开始数的 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一个孩子</li>
+        <li>第二个孩子</li>
+        <li>第三个孩子</li>
+        <li>第四个孩子</li>
+        <li>第五个孩子</li>
+        <li>第六个孩子</li>
+    </ul>
+</body>
+</html>

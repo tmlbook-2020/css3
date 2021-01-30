@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两面翻转的图片</title>
+    <style>
+        div {
+            width: 224px;
+            height: 224px;
+            margin: 100px auto;
+            position: relative;
+        }
+        div img {
+            width: 224px;
+            height: 224px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s;
+        }
+        div img:first-child {
+            z-index: 1;
+            backface-visibility: hidden; /* 不是正面对向屏幕，就隐藏 */ 
+        }
+        div:hover img {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/c1.jfif" alt="">
+        <img src="images/c2.jfif" alt="">
+    </div>
+</body>
+</html>

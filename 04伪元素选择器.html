@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        /* .demo 类选择器
+        :first-child 伪类选择器
+        ::first-letter 伪元素选择器 */
+        p::first-letter {  /* 选择第一个字 */
+            color: red;
+            font-size: 50px;
+        }
+        p::first-line {  /* 选择第一行 */
+            color: green;
+        }
+        p::selection { /* 当我们选中文字的时候，可以变化的样式 */
+            color: pink;
+        }
+        /* ::before 和 after 在盒子div的内部的前面插入或者是后边插入 */
+        div::before {
+            content: "我";
+        }
+        div::after {
+            content: "21";
+        }
+    </style>
+</head>
+<body>
+    <div>今年</div>
+    <h1>element</h1>
+    <p>中文译词：微量元素; 元素; 成分; 金属元素; 零件; 矿质元素; 化学元素; 因素; 单元; 结构要素; 要素; 组成要素; 构成要素; 元件; 元素地球化学; 元程序; 微元; 元分析; 元素分布; 构成元素; 元模型; 有限元; 单元件; 天线单元; 元素利用效率; 阵元; 提升平土机; 元计算; 组件; 全新世; 杆件; 钢种成分; 稀土元素; 成因; 基团; 基本体; 组元; 基本要素; 单元法; 电池极板; 分割单元; 元方法; 部分; 网元; 元法; 电池; 部件; 滤芯; 元线; 原理; 器件; 元件、零件、单元; 镜片; 事件; [单]元; 居住权的要件; 构件; 组成; 元素性; 土壤; 成份; 义素; 分队; 母元素; 大气要素; 断面项目; 表面元件; 重元素; 中间重量元素; 奇质量数元素; 僭翾U料元件; 体积元; 钍基燃料元件; 过渡元素; 子元素; 伺服元件; 非结合燃料</p>
+</body>
+</html>

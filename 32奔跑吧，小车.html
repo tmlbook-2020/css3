@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奔跑吧，小车</title>
+    <style>
+        img {
+            animation: car 8s infinite;
+        }
+        /* 定义动画 */
+        @keyframes car {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(1000px, 0, 0);
+            }
+            51% {
+                transform: translate3d(1000px, 0, 0) rotateY(180deg);
+                /* 如果有多组变形，都属于transform，我们就用空格隔开就好 */
+            }
+            100% {
+                transform: translate3d(0, 0, 0) rotateY(180deg);
+                /* 如果有多组变形，都属于transform，我们就用空格隔开就好 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="images/car.jfif" width="150px" alt="">
+</body>
+</html>

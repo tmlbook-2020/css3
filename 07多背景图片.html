@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多背景图片</title>
+    <style>
+        div {
+            width: 600px;
+            height: 600px;
+            background: url(images/1.jpg) no-repeat left top,
+            url(images/2.png) no-repeat right bottom hotpink;
+            /* 为了避免背景色将图像盖住，背景色通常都定义再最后一组上 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

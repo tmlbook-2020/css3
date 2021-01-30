@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D变形-缩放</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 0.5s;
+        }
+        div:hover {
+            transform: scale(2);/* x水平缩放 y垂直缩放 如果只写一个参数 宽度和高的都缩放 */
+        }
+        section {
+            width: 452px;
+            height: 246px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+        section img {
+            transition: all 0.5s;/* 因为图片缩放了，实际图片做动画，所以过渡要给img 加。谁做动画，谁加过渡 */
+        }
+        /* 鼠标经过section的时候，里边的img缩放 */
+        section:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <section>
+        <img src="images/2.png" width="452px" height="246px">
+    </section>
+</body>
+</html>

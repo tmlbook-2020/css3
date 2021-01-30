@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开门大吉</title>
+    <style>
+        section {
+            width: 450px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            background: url(images/cqz.jpg) no-repeat;
+            position: relative;
+            perspective: 1000px; /* 给父盒子添加透视效果 */
+        }
+        .door-l, .door-r {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-color: red;
+            transition: all 0.6s;
+        }
+        .door-l {
+            left: 0;
+            border-right: 1px solid #000;
+            transform-origin: left; /* 左侧盒子左侧翻转 */
+        }
+        .door-r {
+            right: 0;
+            border-left: 1px solid #000;
+            transform-origin: right; /* 右侧盒子右侧翻转 */ 
+        }
+        .door-l::before, .door-r::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            transform: translateY(-50%);/* translate如果是百分比的，就是走自己高度的一半 */
+        }
+        .door-l::before {
+            right: 5px;
+        }
+        .door-r::before {
+            left: 5px;
+        }
+        /* 鼠标经过section盒子，两个门盒子翻转 rotateY */
+        section:hover .door-l {
+            transform: rotateY(-130deg);/* 往左翻转，所以是负值 */
+        }
+        section:hover .door-r {
+            transform: rotateY(130deg);/* 往右翻转，所以是正值 */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="door-l"></div>
+        <div class="door-r"></div>
+    </section>
+</body>
+</html>
